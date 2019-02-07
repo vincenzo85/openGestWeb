@@ -39,7 +39,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									
+									<!--  ${ espression language } tutto quello che è li dentro è considerato una variabile -->
 								   <c:forEach items='${customerList}' var="current">
 										<tr>
 											<td>

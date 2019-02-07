@@ -8,8 +8,12 @@
 		<param-name>i18n.messages</param-name>
 		<param-value>en_US</param-value>
 	</context-param>
+	
+	<!--  accessibile in ogni servlet sanno leggere queste informazioni  -->
 	<context-param>
+	<!--  la classe attivata per gestire le traduzioni -->
 		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		
 		<param-value>i18n.messages</param-value>
 	</context-param>
 	<servlet>
@@ -20,12 +24,12 @@
 		<init-param>
 			<description>Driver per la connessione alla base dati</description>
 			<param-name>DATABASE_DRIVER</param-name>
-			<param-value>com.mysql.jdbc.Driver</param-value>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
 		</init-param>
 		<init-param>
 			<description>URL per la connessione alla base dati</description>
 			<param-name>DATABASE_URL</param-name>
-			<param-value>jdbc:mysql://localhost:3306/opengest</param-value>
+			<param-value>jdbc:mysql://localhost:3306/opengest?useSSL=false&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</param-value>
 		</init-param>
 		<init-param>
 			<description>USERNAME per la connessione alla base dati</description>
